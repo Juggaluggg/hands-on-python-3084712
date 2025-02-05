@@ -27,9 +27,16 @@ def laureate_list():
     # tip: remember that laureate["name"] contains a first name
     for laureate in laureates:
         surname = laureate["surname"].lower()
-        # your code here
-        if search_string in surname:
+        name = laureate["name"].lower() 
+
+        if search_string in name + surname: # searches both lists workout myself ;)
+            search_string
             results.append(laureate)
+            
+            #solution from person 
+        
+            # (search_string in name) or (search_string in surname) provides similar
+            
 
     return jsonify(results)
 

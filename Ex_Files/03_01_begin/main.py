@@ -12,11 +12,11 @@ EINSTEIN = {
     "motivation": "for his services to Theoretical Physics...",
 }
 
-with open("laureates.csv", "r") as f:
-    reader = csv.DictReader(f)
-    laureates = list(reader)
+with open("laureates.csv", "r") as f: #Opens the file in read mode 
+    reader = csv.DictReader(f) #Reads file 
+    laureates = list(reader) #Creates a list of from file 
 
-for laureate in laureates:
-    if laureate["surname"] == "Einstein":
-        pprint(laureate)
+for laureate in laureates: #Looks for in field of the filename  
+    if laureate["surname"] == "Einstein": # surname field for Einstein
+        pprint(laureate) #pretty prints the data in JSON format
         break
